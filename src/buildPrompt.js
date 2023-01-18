@@ -9,20 +9,21 @@ const promptTemplate = requireText('../data/promptTemplate.txt')
 
 module.exports = (input, options = {}) => {
 
-    switch(options.platform){
-        case 'aix': input += ' on IBM AIX'; break;
-        case 'linux': input += ' on Linux'; break;
-        case 'darwin': input += ' on Apple OSX'; break;
-        case 'win32': input += ' with PowerShell'; break;
-        case 'freebsd': input += ' on FreeBSD'; break;
-        case 'openbsd': input += ' on OpenBSD'; break;
-        case 'sunos': input += ' on Sunos'; break;
-        case 'cmd': input += ' with Windows Command Prompt'; break;
-    }
+    // switch(options.platform){
+    //     case 'aix': input += ' on IBM AIX'; break;
+    //     case 'linux': input += ' on Linux'; break;
+    //     case 'darwin': input += ' on Apple OSX'; break;
+    //     case 'win32': input += ' with PowerShell'; break;
+    //     case 'freebsd': input += ' on FreeBSD'; break;
+    //     case 'openbsd': input += ' on OpenBSD'; break;
+    //     case 'sunos': input += ' on Sunos'; break;
+    //     case 'cmd': input += ' with Windows Command Prompt'; break;
+    // }
 
-    //--- Insert the input in the template
-    prompt = _.replace(promptTemplate, '{{input}}', input)
+    // //--- Insert the input in the template
+    // prompt = _.replace(promptTemplate, '{{input}}', input)
 
-    //--- Return the generated prompt.
-    return prompt
+    // //--- Return the generated prompt.
+    // return prompt
+    return input
 }
